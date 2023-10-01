@@ -1,0 +1,36 @@
+### Criar pessoa
+POST http://0.0.0.0:3000/pessoas
+
+> {%
+    client.test("Request executed successfully", function () {
+        client.assert(response.status === 200, "Response status is not 200");
+    });
+%}
+
+### Buscar pessoas por id
+GET http://0.0.0.0:3000/pessoas/:id
+
+> {%
+    client.test("Request executed successfully", function () {
+        client.assert(response.status === 200, "Response status is not 200");
+    });
+%}
+
+### Buscar pessoas
+GET http://0.0.0.0:3000/pessoas
+
+> {%
+    client.test("Request executed successfully", function () {
+        client.assert(response.status === 200, "Response status is not 200");
+    });
+%}
+
+### Contar pessoas
+GET http://0.0.0.0:3000/contagem-pessoa
+
+> {%
+    client.test("Request executed successfully", function () {
+        client.assert(response.status === 200, "Response status is not 200");
+    });
+%}
+
