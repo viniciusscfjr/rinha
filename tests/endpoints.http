@@ -1,5 +1,16 @@
 ### Criar pessoa
 POST http://0.0.0.0:3000/pessoas
+Content-Type: application/json
+
+{
+  "nome": "nome",
+  "apelido": "nick",
+  "nascimento": "2023-10-01",
+  "stack": [
+    "go",
+    "rust"
+  ]
+}
 
 > {%
     client.test("Request executed successfully", function () {
@@ -8,7 +19,7 @@ POST http://0.0.0.0:3000/pessoas
 %}
 
 ### Buscar pessoas por id
-GET http://0.0.0.0:3000/pessoas/:id
+GET http://0.0.0.0:3000/pessoas/018aed86-d639-722c-9127-e0e455930e82
 
 > {%
     client.test("Request executed successfully", function () {
@@ -33,4 +44,3 @@ GET http://0.0.0.0:3000/contagem-pessoa
         client.assert(response.status === 200, "Response status is not 200");
     });
 %}
-
